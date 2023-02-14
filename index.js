@@ -13,12 +13,12 @@ const app=express()
 
 const port=process.env.PORT || 8000;
 const corsOptions ={
-    origin:true,
-    credentials:true,
+    origin:'*',
+    Credentials:true,
 
 }
 app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Credentials', '*');
     next();
   });
   
